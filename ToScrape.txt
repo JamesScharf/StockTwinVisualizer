@@ -1,0 +1,29 @@
+Use following databases:
+https://pypi.org/project/wikipedia/
+https://pypi.org/project/Wikidata/
+
+
+
+Things to extract about a stock/company:
+
+1. Wikipedia description
+2. Wikipedia industry
+3. Stock exchange
+4. OFFICIAL WEBSITE -- WILL SCRAPE THIS
+5. Wikipedia in other languages -- maybe translate first?
+6. Wikipedia references (and scrape these two, but add them as a different corpus)
+7. Wikipedia categories of page
+8. Links to scrape on the page
+
+
+SOME IDEAS RELATED TO USERS:
+1. Make user list his linkedin profile
+2. Extract the keywords of his page
+3. Track what people with those keywords like
+4. Recommend stocks that these other people printed in
+
+
+SOME IDEAS FOR PORTFOLIO DIVERSIFICATION
+1. Collect data for every stock (or sample) in the set
+2. Run a clustering algorithm
+3. Recommend stocks in each cluster, ranked by current performance metrics

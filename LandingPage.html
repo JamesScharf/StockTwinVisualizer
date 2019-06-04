@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <title>Stock Finder</title>
+    
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+    
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+        <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+    
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#3372DF">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-indigo.min.css" />
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    </head>
+
+    <body>
+        <style>
+                #view-source {
+                    position: fixed;
+                    display: block;
+                    right: 0;
+                    bottom: 0;
+                    margin-right: 40px;
+                    margin-bottom: 40px;
+                    z-index: 900;
+                }
+        </style>
+        <!-- Always shows a header, even in smaller screens. -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Stock Finder</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+            mdl-textfield--floating-label mdl-textfield--align-right">
+                <label class="mdl-button mdl-js-button mdl-button--icon"
+                    for="fixed-header-drawer-exp">
+                    <i class="material-icons">search</i>
+                </label>
+                <div class="mdl-textfield__expandable-holder">
+                    <form>
+                        <input class="mdl-textfield__input" type="text" name="stockSYM"
+                            id="fixed-header-drawer-exp">
+                    </form>
+                </div>
+            </div>
+
+            </div>
+        </header>
+
+        <main class="demo-main mdl-layout__content">
+            <div class="page-content">
+                <!-- Your content goes here -->
+
+
+                <div class="demo-container mdl-grid">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                        <div class="demo-content mdl-color--white content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+                            <h3>Disclaimer</h3>
+                            <p>The results of our program should not be interpreted as financial advice. We are not registered financial advisors and we recommend that users consult with professionals before purchasing a stock. This program is an <b>information retrieval</b> and visualization service, not a stock recommender. As such, we assume no responsibility for the results of any purchases.</p>
+                            <h3>When to use this service</h3>
+                            <p>So, you have a stock that you like. But, that feeling is based on more than the stock price. You like what newspapers say about it online. Or, maybe you like the gist of its Wikipedia page. Either way, this service helps you retrieve stocks based on internet content similarity. However, be aware that some companies lack strong online presences, so these comparisons might be incomplete or uninformed.</p>
+                            <h3>How to use this service</h3>
+                            <p>In the search box in the top right, input the <b>stock symbol</b> (e.g. "GOOG"), followed by a <b>number</b> for the sample size from which we initially select stocks. Your results will improve with larger samples, but be advised that for additional stocks your computation time increases by about <b>30 seconds</b>. Here are some examples:</p>
+                            <ul>
+                                <pre>GOOG 4</pre>
+                                <pre>AAPL 8</pre>
+                                <pre>MSFT 11</pre>
+                            </ul>
+                            <p>Start off with a low sample size and increase only if you need to.</p>
+
+
+                        </div>
+                      </div>
+            
+            </div>
+        </main>
+        </div>
+        
+    </body>
+</html>

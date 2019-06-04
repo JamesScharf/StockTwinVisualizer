@@ -1,0 +1,55 @@
+1. Corpuses (that come from scraper)
+
+    a. News: Do regular tf-idf similarity comparison (cosine)
+        -titles
+        -summaries
+        -texts
+
+    b. Wikipedia summary: tf-idf similarity comparison (overlap)
+
+    c. links: DON'T RUN SIMILARITY METRIC. Just see whether the
+        text in one stock's list show up in the links of another.
+        -exact matches of pairs of words
+
+
+2. Make function to return a random amount of stock objects
+    -- compare.py needs to pass a sample size
+
+    -- Scraper.scrape(sampleSize)
+
+3. User interface:
+    - PCA of similar metrics
+        - assume giving me a dataframe that looks like
+
+        stock_SYMBOL    STOCK_COMPANY   WIKI_SIMILARITY   NEWS_SIMILARITY   LINK_SIMILARITY
+
+        AAPL            Apple           0.83                0.26            0.19       
+
+    - Ask user whether you want to weight metric of news or the summary more
+    - Ask random sample
+
+
+
+
+
+MEETING MAY 3:
+
+0. Use material design lite https://getmdl.io/components/index.html#layout-section (fixed header and drawer)
+1. Search is the place we plug the original stock into
+
+2. Links:
+    a. Similarity for news 
+    b. Similarity for references
+    c. Similarity ..... for each thing (make their own dashboard)
+
+3. Change main.py DashboardGenerator.py 
+    --- serve a new dashboard.html for each similarity
+
+
+May 6 meeting:
+
+1. Bar graphs that David did in the relevance tab
+2. Don't worry about PCA
+3. David is taking care of the writeup
+4. General sentiment on whether our project is good enough from Winston
+5. Maybe cross-language wikipedia searches when there is none?

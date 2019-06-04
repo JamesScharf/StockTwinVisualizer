@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <title>Stock Finder</title>
+    
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+    
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+        <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+    
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#3372DF">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-indigo.min.css" />
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.css" type="text/css" />
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+
+
+    </head>
+
+    <body>
+        <style>
+                #view-source {
+                    position: fixed;
+                    display: block;
+                    right: 0;
+                    bottom: 0;
+                    margin-right: 40px;
+                    margin-bottom: 40px;
+                    z-index: 900;
+                }
+        </style>
+
+            <!-- Simple header with fixed tabs. -->
+            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+                        mdl-layout--fixed-tabs">
+                <header class="mdl-layout__header">
+                    <div class="mdl-layout__header-row">
+                        <!-- Title -->
+                        <span class="mdl-layout-title">Stock Finder</span>
+                        <!-- Add spacer, to align navigation to the right -->
+                        <div class="mdl-layout-spacer"></div>
+
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                        mdl-textfield--floating-label mdl-textfield--align-right">
+                            <label class="mdl-button mdl-js-button mdl-button--icon"
+                                for="fixed-header-drawer-exp">
+                                <i class="material-icons">search</i>
+                            </label>
+                            <div class="mdl-textfield__expandable-holder">
+                                <form>
+                                    <input class="mdl-textfield__input" type="text" name="stockSYM"
+                                        id="fixed-header-drawer-exp">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tabs -->
+                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                        <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Relevance</a>
+                        <a href="#fixed-tab-2" class="mdl-layout__tab">News Polarity</a>
+                        <a href="#fixed-tab-3" class="mdl-layout__tab">News Bias</a>
+
+                    </div>
+                </header>
+                <main class="mdl-layout__content">
+                    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+                    <div class="page-content">
+                        <!-- Your content goes here -->
+                        
+                        <!--Where we're embedding the relevance dashboard (script, html)-->
+
+                        {{relScript}}
+                        {{relHtml}}
+                    </div>
+                    </section>
+                    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+                        <div class="page-content">
+                            <!-- Your content goes here -->
+
+                            <!--Where we're embedding the polarity dashboard (script, html)-->
+                        {{polarityScript}}
+                        {{polarityHtml}}
+                        
+                        </div>
+                    </section>
+                    <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+                        <div class="page-content">
+                            <!-- Your content goes here -->
+        
+                            <!--Where we're embedding the bias dashboard (script, html)-->
+                            {{biasScript}}
+
+                            {{biasHtml}}
+                            
+                        </div>
+                        </section>
+                </main>
+            </div>
+        </div>
+        
+    </body>
+</html>
